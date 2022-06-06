@@ -1,0 +1,37 @@
+
+2022/03/16(宥俞):
+	New:
+	  Feature_Color.py:
+	    新增featureMainColor(),用以顯示糞便的5大顏色所佔的比例
+
+2022/03/24(宥俞):
+	New:
+	  Feature_Function.py:
+	    getHealthPoint()方法:將擷取完的特徵透過一些算式,輸出成一個健康度分數,0代表最低,10代表最健康,精準度為.1f
+	  main.py:
+	    新增healthPoint變數,用來紀錄健康分數
+	Fix:
+	  Feature_Color.py:
+	    修改featureMainColor()中會判斷到背景顏色的錯誤
+	    修改其他的def方法,將Kmeans的主要顏色方法分開成新的plot_image_Kmeans()
+
+2022/03/25(濰凱):
+	Fix:
+	  Feature_Function.py:
+	    修改getHealthPoint()的輸入值，list->dic
+
+2022/04/03(宥俞):
+	New:
+	  Feature_Function.py:
+	    新增getHealthResult(dic,sep),用文字以顯示各特徵的結果,dic為特徵結果、sep為欲分開的字元,輸出為一組字串
+	  main.py:
+	    新增healthResult變數,用來紀錄各特徵的文字結果
+
+2022/04/08(宥俞):
+	Fix:
+	  Blood.h5:
+	    更新Blood.h5模型,該測試資料集準確率為0.9779
+	  best.pt:
+	    更新runs/train/全exp/best.pt模型,為yolov5的模型
+	  utils/general.py:
+	    修正increment_path()函式,解決可能找不到路徑及資料夾的問題(*重要)
